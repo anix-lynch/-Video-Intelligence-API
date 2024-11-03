@@ -14,6 +14,7 @@
   - [Logo Detection](#logo-detection)
   - [Text Detection](#text-detection)
   - [Speech Transcription](#speech-transcription)
+  - [Label Detection and Analysis](#label-detection-and-analysis)
 - [Conclusion](#conclusion)
 
 ## Project Overview
@@ -83,6 +84,20 @@ pip install google-cloud-video-intelligence python-dotenv
 1. Import libraries and create a function to configure speech transcription.
 2. Use the `annotate_video` method with the `SPEECH_TRANSCRIPTION` feature.
 3. Print the transcription, confidence level, and speaker tags.
+
+### Label Detection and Analysis
+**Purpose**: Detect and categorize objects, places, and actions within the video and return descriptions, categories, and timestamps.
+
+**Steps**:
+1. Import required libraries, including the `io` module and `VideoIntelligenceServiceClient` from `google.cloud`.
+2. Create the main function to initialize the `VideoIntelligenceServiceClient` and set the `LABEL_DETECTION` feature.
+3. Read the video content and create an operation object by calling the `annotate_video` method.
+4. Process the result, extract segment labels, and print descriptions, categories, and timestamps.
+5. Print confidence scores for each segment for analysis.
+
+## Conclusion
+This crash course covered the fundamentals of using the Google Cloud Video Intelligence API with Python. By following the provided steps and examples, you can leverage video analysis to detect faces, people, logos, text, and transcribe speech, enhancing your ability to manage and understand video data.
+
 
 ## Conclusion
 This crash course covered the fundamentals of using the Google Cloud Video Intelligence API with Python. By following the provided steps and examples, you can leverage video analysis to detect faces, people, logos, text, and transcribe speech, enhancing your ability to manage and understand video data.
